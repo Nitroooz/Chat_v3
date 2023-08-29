@@ -24,26 +24,30 @@ function App() {
 
   return (
     <>
-      <img src={user.photo} className="logo react" alt="React logo" />
-      <h1>{user.nome}</h1>
-      <h2>{user.email}</h2>
-      <hr />
-      <div className="card">
-        <button className="b" onClick={() => myloginWithGoogle(setUser)}>
-          Login com Google
-        </button>
-        <button className="b" onClick={() => myLogout()}>
-          Deslogar
-        </button>
+      <div className='divHeader'>
+        <div className='divUsuario'>
+          <img src={user.photo} className="logo react" alt="React logo" />
+          <h1>{user.nome}</h1>
+          <h2 className='tEmail'>{user.email}</h2>
+        </div>
+        {/* <hr /> */}
+        <div className="card">
+          <button className="b" onClick={() => myloginWithGoogle(setUser)}>
+            Login com Google
+          </button>
+          <button className="b" onClick={() => myLogout()}>
+            Deslogar
+          </button>
+        </div>
       </div>
-      <hr />
-      <div>
+      {/* <hr /> */}
+      <div className='divPosts'>
 
         {posts.map((post) => (
             <div className="posts" key={post.key}>
               <img className='photo' src={post.photo} />
-              <h2>{post.user}:</h2>
-              <h3>{post.text}</h3>
+              <h2 className='tNameUser'>{post.user}:</h2>
+              <h3 className='tTextPost'>{post.text}</h3>
             </div>
           ))}
       </div>
