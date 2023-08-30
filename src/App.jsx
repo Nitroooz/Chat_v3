@@ -8,7 +8,7 @@ import { myloginWithGoogle, myLogout, activateUpdate, writeUserData } from './Fi
 function App() {
   const [user, setUser] = useState({
     nome: 'Usuário',
-    email: 'email',
+    email: 'Email',
     photo: viteLogo,
   });
 
@@ -26,16 +26,18 @@ function App() {
     <>
       <div className='divHeader'>
         <div className='divUsuario'>
-          <img src={user.photo} className="logo react" alt="React logo" />
-          <h1>{user.nome}</h1>
-          <h2 className='tEmail'>{user.email}</h2>
+          <img src={user.photo} className="logo" alt="React logo" />
+          <div className='divUserEmail'>
+            <h1 className='tUserName' >{user.nome}</h1>
+            <h2 className='tEmail'>{user.email}</h2>
+          </div>
         </div>
         {/* <hr /> */}
         <div className="card">
-          <button className="b" onClick={() => myloginWithGoogle(setUser)}>
+          <button className="bLoginGoogle" onClick={() => myloginWithGoogle(setUser)}>
             Login com Google
           </button>
-          <button className="b" onClick={() => myLogout()}>
+          <button className="bDeslogar" onClick={() => myLogout()}>
             Deslogar
           </button>
         </div>
