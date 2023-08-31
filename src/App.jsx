@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-
 import { myloginWithGoogle, myLogout, activateUpdate, writeUserData } from './Firebase';
 
 function App() {
@@ -20,6 +18,7 @@ function App() {
   
   useEffect(() => {
     activateUpdate(setPosts);
+    window.scrollTo(0, document.body.scrollHeight);
   }, []);
 
   return (
@@ -53,13 +52,20 @@ function App() {
             </div>
           ))}
       </div>
-      <div>
-        <input
-          onChange={(callback) => setTInput(callback.target.value)}
+      <div className='divEnviarMsg'>
+        <input id='input1'
+        placeholder="Digite sua mensagem..."
+          onChange={(event) => {setTInput(event.target.value)}}
+          onKeyUp={(event)=>{ 
+              if(event.key === "Enter") {
+              writeUserData(tInput)
+              event.target.value=""
+              }}}
         />
-        <button className="b" onClick={() =>{
-        writeUserData(tInput);
-        setTInput = ("");
+        <button className="bEnviarMsg" id='bEnviarMsg' onClick={() =>{
+          writeUserData(tInput);
+          let input1 = document.getElementById("input1");
+          input1.value = "";
         }}>
           Enviar
         </button>
@@ -67,5 +73,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
