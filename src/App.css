@@ -1,5 +1,5 @@
 #root {
-  max-width: 1500px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -113,7 +113,8 @@ h1 {
 }
 
 .divHeader {
-  border: white solid 1px;
+  border: #bd34fe solid 1px;
+  border-radius: 3px;
   display: flex;
   justify-content: space-between;
   max-height: 133px;
@@ -128,13 +129,12 @@ max-height: 144px;
 }
 
 .divPosts {
-  border: white solid 1px;
   margin: 115px 1em 60px 1em;
 
 }
 
 .tHorario {
-  margin: 0px;
+  margin: 6.5% 0px 0px 7px;
   color: white;
 
 }
@@ -150,12 +150,12 @@ max-height: 144px;
 
 .tEmail {
   color: white;
-  border: white solid 1px;
   margin-bottom: 31px;
   margin-top: 5px;
   margin-left: 10px;
   max-height: 50px;
   font-style: italic;
+  text-align: left;
 }
 
 .divUsuario {
@@ -196,5 +196,5 @@ input {
 }
 
 .bEnviarMsg:hover {
-  filter: drop-shadow(0 0 2em #fe4ce9);
+  filter: drop-shadow(0 0 2em #2ec754);
 }

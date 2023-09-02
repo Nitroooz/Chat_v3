@@ -57,11 +57,8 @@ function App() {
               <img className='photo' src={post.photo} />
               <h2 className='tNameUser'>{post.user}:</h2>
               {post.time&&<h5 className='tHorario'>
-              {`${(new Date(post.time)).getDate()}:${(new Date(post.time)).getMonth() < 10? "0"+(new Date(post.time)).getMonth().toString() : (new Date(post.time)).getMonth()}`}/
-              {`${(new Date(post.time)).getHours()}:${(new Date(post.time)).getMinutes() < 10? "0"+(new Date(post.time)).getMinutes().toString() : (new Date(post.time)).getMinutes()}`}
-              </h5>}
+              {`${(new Date(post.time)).getDate() < 10? "0"+(new Date(post.time)).getDate().toString() : (new Date(post.time)).getDate()}/${(new Date(post.time)).getMonth() < 10? "0"+(new Date(post.time)).getMonth().toString() : (new Date(post.time)).getMonth()}`} {`${(new Date(post.time)).getHours() < 10? "0"+(new Date(post.time)).getHours().toString() : (new Date(post.time)).getHours()}:${(new Date(post.time)).getMinutes() < 10? "0"+(new Date(post.time)).getMinutes().toString() : (new Date(post.time)).getMinutes()}`}</h5>}
               <h3 className='tTextPost'>{post.text}</h3>
-              
             </div>
           ))}
       </div>
