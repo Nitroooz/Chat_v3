@@ -40,7 +40,7 @@
 
 .logo {
   height: 6em;
-  margin: 24px 16px;
+  margin: 19px 16px;
   filter: drop-shadow(0 0 2em #ffffff87);
   border-radius: 1000px;
 }
@@ -50,7 +50,7 @@
 }
 
 .card {
-  margin: 31px 0px 36px 0px;
+  margin: 26px 0px 31px 0px;
   min-width: 184px;
   max-width: 190px;
   
@@ -116,8 +116,10 @@ h1 {
   border: white solid 1px;
   display: flex;
   justify-content: space-between;
-  max-height: 144px;
-
+  max-height: 133px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 
@@ -127,13 +129,20 @@ max-height: 144px;
 
 .divPosts {
   border: white solid 1px;
-  margin: 0px 1em 60px 1em;
+  margin: 115px 1em 60px 1em;
+
+}
+
+.tHorario {
+  margin: 0px;
+  color: white;
+
 }
 
 .tUserName {
   font-size:x-large;
   max-height: 50px;
-  margin-top: 36px;
+  margin-top: 31px;
   margin-bottom: 0px;
   margin-left: 10px;
   text-align: left;
@@ -142,7 +151,7 @@ max-height: 144px;
 .tEmail {
   color: white;
   border: white solid 1px;
-  margin-bottom: 36px;
+  margin-bottom: 31px;
   margin-top: 5px;
   margin-left: 10px;
   max-height: 50px;
@@ -162,7 +171,7 @@ max-height: 144px;
   height: 48px;
   border: white 1px solid;
   border-radius: 10px;
-  background-color: #777577;
+  background-color: #99b381;
   
 }
 
@@ -171,7 +180,7 @@ input {
   border: white 1px solid;
   border-radius: 50px;
   color: rgb(0, 0, 0);
-  width: 85%;
+  width: 80%;
   padding: 3px 3px 3px 5px;
   font-size: medium;
   font-weight: bold;

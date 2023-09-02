@@ -14,12 +14,20 @@ function App() {
 
   const [tInput, setTInput] = useState("");
 
-  const [posts, setPosts] = useState([{user: "Vitor", text: "alow", photo: ""}]);
+  const [posts, setPosts] = useState([{user: "Vitor", text: "alow", photo: "",time:0}]);
   
   useEffect(() => {
     activateUpdate(setPosts);
     window.scrollTo(0, document.body.scrollHeight);
   }, []);
+
+  useEffect(()=>{
+    setPosts(posts.sort((a, b) => {
+      let da = new Date(a.time),
+          db = new Date(b.time);
+      return da - db;
+    }));
+  })
 
   return (
     <>
@@ -48,7 +56,12 @@ function App() {
             <div className="posts" key={post.key}>
               <img className='photo' src={post.photo} />
               <h2 className='tNameUser'>{post.user}:</h2>
+              {post.time&&<h5 className='tHorario'>
+              {`${(new Date(post.time)).getDate()}:${(new Date(post.time)).getMonth() < 10? "0"+(new Date(post.time)).getMonth().toString() : (new Date(post.time)).getMonth()}`}/
+              {`${(new Date(post.time)).getHours()}:${(new Date(post.time)).getMinutes() < 10? "0"+(new Date(post.time)).getMinutes().toString() : (new Date(post.time)).getMinutes()}`}
+              </h5>}
               <h3 className='tTextPost'>{post.text}</h3>
+              
             </div>
           ))}
       </div>

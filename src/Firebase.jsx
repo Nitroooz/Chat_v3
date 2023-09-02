@@ -104,5 +104,6 @@ export function writeUserData(texto) {
     text: texto,
     user: userName,
     photo: photoURL,
+    time: aux,
   });
 }
