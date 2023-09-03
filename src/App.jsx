@@ -56,14 +56,14 @@ function App() {
             <div className="posts" key={post.key}>
               <img className='photo' src={post.photo} />
               <h2 className='tNameUser'>{post.user}:</h2>
-              {post.time&&<h5 className='tHorario'>
-              {`${(new Date(post.time)).getDate() < 10? "0"+(new Date(post.time)).getDate().toString() : (new Date(post.time)).getDate()}/${(new Date(post.time)).getMonth() < 10? "0"+(new Date(post.time)).getMonth().toString() : (new Date(post.time)).getMonth()}`} {`${(new Date(post.time)).getHours() < 10? "0"+(new Date(post.time)).getHours().toString() : (new Date(post.time)).getHours()}:${(new Date(post.time)).getMinutes() < 10? "0"+(new Date(post.time)).getMinutes().toString() : (new Date(post.time)).getMinutes()}`}</h5>}
+              {post.time&&<h5 className='tHorario'>{`${(new Date(post.time)).getDate() < 10? "0"+(new Date(post.time)).getDate().toString() : (new Date(post.time)).getDate()}/${((new Date(post.time)).getMonth() + 1) < 10 ? "0" + ((new Date(post.time)).getMonth() + 1).toString() : ((new Date(post.time)).getMonth() + 1)}`} {`${(new Date(post.time)).getHours() < 10? "0"+(new Date(post.time)).getHours().toString() : (new Date(post.time)).getHours()}:${(new Date(post.time)).getMinutes() < 10? "0"+(new Date(post.time)).getMinutes().toString() : (new Date(post.time)).getMinutes()}`}</h5>}
               <h3 className='tTextPost'>{post.text}</h3>
             </div>
           ))}
       </div>
       <div className='divEnviarMsg'>
         <input id='input1'
+        // colocar className e mudar no css
         placeholder="Digite sua mensagem..."
           onChange={(event) => {setTInput(event.target.value)}}
           onKeyUp={(event)=>{ 
