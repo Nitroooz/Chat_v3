@@ -38,6 +38,7 @@ function App() {
             <h1 className='tUserName' >{user.nome}</h1>
             <h2 className='tEmail'>{user.email}</h2>
           </div>
+          <h2 className='tChatAoVivo'>Chat Ao Vivo</h2>
         </div>
         {/* <hr /> */}
         <div className="card">
@@ -62,8 +63,7 @@ function App() {
           ))}
       </div>
       <div className='divEnviarMsg'>
-        <input id='input1'
-        // colocar className e mudar no css
+        <input className='input1' id='input1'
         placeholder="Digite sua mensagem..."
           onChange={(event) => {setTInput(event.target.value)}}
           onKeyUp={(event)=>{ 

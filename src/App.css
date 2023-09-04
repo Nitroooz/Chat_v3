@@ -63,6 +63,15 @@ max-height: 144px;
   text-align: left;
 }
 
+.tChatAoVivo{
+  margin: 0px;
+  color: white;
+  position: fixed;
+  top: 50px;
+  left: 45%;
+}
+
+
 .card {
   margin: 26px 0px 31px 0px;
   min-width: 184px;
@@ -97,7 +106,7 @@ max-height: 144px;
 }
 
 .posts {
-  border: #bd34fe solid 5px;
+  border: #8c34fe solid 5px;
   border-radius: 50px;
   width: 75%;
   /* align-items: center; */
@@ -106,7 +115,6 @@ max-height: 144px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .photo {
@@ -159,7 +167,7 @@ max-height: 144px;
   background-color: #99b381;
 }
 
-input {
+.input1 {
   background-color: white;
   border: white 1px solid;
   border-radius: 50px;
